@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Web Design Challenge</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style_ar.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">Plots<span class="caret"></span></a>
+              <ul class="dropdown-menu custom-menu">
+                <li><a href="visualization01.html">Maximum Temperature</a></li>
+                <li><a href="visualization02.html">Cloudiness</a></li>
+                <li><a href="visualization03.html">Wind Speed</a></li>
+                <li><a href="visualization04.html">Humidity</a></li>
+              </ul>
+              </a>
+            </li>
+            <li><a href="comparisons.html">Comparisons</a></li>
+            <li><a href="data_table.html">Data</a></li>
+          </ul>
+          <select id="nav-select">
+            <option value="home">Home</option>
+            <option value="plots">Plots</option>
+            <option value="comparisons"><a href="comparisons.html">Comparisons</a></option>
+            <option value="data_table">Data</option>
+          </select>
+          <div class="clearfix"></div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Latitude Analysis Dashboard</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <img id="weather-welcome" src="images\landing_page.jpg" alt="Tree in Weather" width="600">
+
+        <h2>Project Introduction</h2>
+
+        <p>Hello, and welcome to my Latitude Analysis Dashboard. Although I learned HTML4 back in
+          college, I have not used those skills in many years. This web site is also my first
+          experience with Cascading Style Sheets (CSS). On these pages you will find various scatter
+          plots that were created with Pandas in Jupyter Notebook, using the cities.csv provided.
+          These scatterplots illustrate a number of cities by their latitude against
+          various weather phenomena, including Maximum Temperature, Humidity, Wind Speed and Cloudiness. </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Visualizations</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <img id="viz1" src="images\viz1.jpg" alt="Scatter Plot of Latitude versus Maximum Temperature" width="300">
+      </div>
+      <div class="col-md-3">
+        <img id="viz2" src="images\viz2.jpg" alt="Scatter Plot of Latitude versus Cloudiness" width="300">
+      </div>
+      <div class="col-md-3">
+        <img id="viz3" src="images\viz3.jpg" alt="Scatter Plot of Latitude versus Wind Speed" width="300">
+      </div>
+      <div class="col-md-3">
+        <img id="viz4" src="images\viz4.jpg" alt="Scatter Plot of Latitude versus Humidity" width="300">
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web Scraping - Mission to Mars</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="mars_style.css">
+</head>
+
+<body>
+    <div >
+      <h1 class="jumbotron text-center">Mission to Mars</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Latest News</h2>
+        {% for item in mars_news %}
+          <p>{{ mars_news.title }}</p>
+          <p>{{ mars_news.paragraph }}</p>
+            {% endfor %}
+    post = {
+        'title': news_title,
+        'paragraph': news_p,
+    }
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Featured Mars Image</h2>
+        <img id="featured-mars-image" src="" alt="Featured Mars Image" width="600">
+      </div>
+
+      <div class="col-md-6">
+        <h2>Current Weather</h2>
+        <p>InSight sol 561 (2020-06-25) low -89.7ºC (-129.5ºF) high -2.9ºC (26.8ºF)
+          winds from the W at 5.7 m/s (12.8 mph) gusting to 17.8 m/s (39.8 mph)
+          pressure at 7.60 hPa</p>
+
+        <h2>Mars Facts</h2>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="4">Some Details About the Red Planet...</th>
+            </tr>
+            <tr>
+              <th>Some Details About the Red Planet...</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Martian Hemispheres</h2>
+      </div>
+
+      <div class="col-md-6">
+        <img id="valles_hemisphere" src="" alt="Valles Marineris Hemisphere" width="600">
+        <img id="cerberus_hemisphere" src="" alt="Cerberus Hemisphere" width="600">
+      </div>
+
+      <div class="col-md-6">
+        <img id="schiaparelli_hemisphere" src="" alt="Schiaparelli Hemisphere" width="600">
+        <img id="syrtis_hemisphere" src="" alt="Syrtis Major Hemisphere" width="600">
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+</body>
+
+</html>
