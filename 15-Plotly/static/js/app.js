@@ -1,7 +1,8 @@
 function init() {
-  var picker = d3.select("#selDataset")
-  d3.json("./data/samples.json").then((data) => {
 
+  var picker = d3.select("#selDataset")
+
+  d3.json("./data/samples.json").then((data) => {
     var subjectIDs = data.names;
 
     subjectIDs.forEach((id) => {
@@ -12,33 +13,29 @@ function init() {
     });
 
     var firstID = subjectIDs[0];
-
     buildCharts(firstID);
     buildMetadata(firstID);
   });
 }
 
-function optionChange(newID) {
-  buildCharts(id);
-  buildMetadata(id);
+function optionChanged(newID) {
+  buildCharts(newID);
+  buildMetadata(newID);
 }
 
 function buildMetadata(id) {
   d3.json("./data/samples.json").then((data) => {
-
     var metadata = data.metadata
     var filterIDs = metadata.filter(idObject => idObject.id == id);
     var filteredIDs = filterIDs[0];
-    var id_data = d3.select("#sample-metadata");
+    var idData = d3.select("#sample-metadata");
 
-    id_data.html("");
+    idData.html("");
 
     Object.entries(filteredIDs).forEach(([key, value]) => {
-      id_data.append("h6").text(`${key}:${value}`);
+      idData.append("h6").text(`${key.toUpperCase()}: ${value}`);
     });
-
   });
-
 };
 
 function buildCharts(id) {
@@ -71,15 +68,12 @@ function buildCharts(id) {
       hovermode: "closest",
       xaxis: { title: "OTU ID" },
       yaxis: { title: "Amount Found" }
-
-      
     };
 
     Plotly.newPlot("bubble", bubbleTrace, bubbleLayout);
 
     var yticks = otu_ids.slice(0, 10).map(otuID =>
       `OTU ${otuID}`).reverse();
-
 
     var barTrace = [
       {
@@ -99,6 +93,6 @@ function buildCharts(id) {
     Plotly.newPlot("bar", barTrace, barLayout);
 
   });
-};
+}
 
 init();
