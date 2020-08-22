@@ -36,11 +36,11 @@ d3.csv("./assets/data/data.csv").then(function (fileData) {
     });
     // Create Scale Function
     var xLinearScale = d3.scaleLinear()
-        .domain([9, d3.max(fileData, d => d.smokes)])
+        .domain([9, d3.max(fileData, d => d.smokes) + 2])
         .range([0, width]);
 
     var yLinearScale = d3.scaleLinear()
-        .domain([30, d3.max(fileData, d => d.age)])
+        .domain([30, d3.max(fileData, d => d.age) + 2])
         .range([height, 0]);
 
     // Create axis function
@@ -55,32 +55,47 @@ d3.csv("./assets/data/data.csv").then(function (fileData) {
     chartGroup.append("g")
         .call(leftAxis);
 
-        // create circle data markers
-        var circleMarks = chartGroup.selectAll("circle")
+    // Create Circle Data Markers
+    var circleMarks = chartGroup.selectAll("circle")
         .data(fileData)
         .enter()
         .append("circle")
         .attr("cx", d => xLinearScale(d.smokes))
         .attr("cy", d => yLinearScale(d.age))
         .attr("r", "10")
-        // .attr("fill", "pink")
-        .attr("opacity", ".5");
+        .attr("fill", "lightblue")
+        .attr("opacity", "1");
 
-        var state = fileData.map(d => d.state);
-        console.log("States", state);
-
-        // var age = fileData.map(d => d.age);
-        // console.log("age", age);
-
-        // var smokers = fileData.map(d => d.smokes);
-        // console.log("smokes", smokers);
-
-        fileData.forEach(function (d) {
-            d.smokes = +d.smokes;
-            console.log("State:", d.state);
-            console.log("Smokers:", d.smokes);
+    // Create Tool Tips
+    var toolTips = d3.tip()
+        .attr("class", "tooltip")
+        .offset([80, -60])
+        .html(function (d) {
+            return (`${d.state}<br>Smokes: ${d.smokes}<br>Age: ${d.age}`);
         });
-    }).catch(function (error) {
-        console.log(error);
+
+    // Call Tool Tips to the Chart
+
+    chartGroup.call(toolTips);
+
+    // Create Event Listeners so Tool Tips will appear
+    circleMarks.on("click", function (data) {
+        toolTips.show(data, this);
+    })
+        .on("mouseout", function (data, index) {
+            toolTips.hide(data);
+        });
+
+
+    var state = fileData.map(d => d.state);
+    console.log("States", state);
+
+    fileData.forEach(function (d) {
+        d.smokes = +d.smokes;
+        console.log("State:", d.state);
+        console.log("Smokers:", d.smokes);
+    });
+}).catch(function (error) {
+    console.log(error);
 
 });
