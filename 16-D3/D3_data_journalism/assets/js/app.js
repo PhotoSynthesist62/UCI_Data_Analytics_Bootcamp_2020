@@ -7,8 +7,8 @@ var svgHeight = 500;
 var margin = {
     top: 30,
     right: 0,
-    bottom: 60,
-    left: 30
+    bottom: 70,
+    left: 70
 };
 
 var width = svgWidth - margin.left - margin.right;
@@ -47,6 +47,7 @@ d3.csv("./assets/data/data.csv").then(function (fileData) {
     var bottomAxis = d3.axisBottom(xLinearScale);
     var leftAxis = d3.axisLeft(yLinearScale);
 
+
     // Append axes to Chart
     chartGroup.append("g")
         .attr("transform", `translate(0, ${height})`)
@@ -62,9 +63,48 @@ d3.csv("./assets/data/data.csv").then(function (fileData) {
         .append("circle")
         .attr("cx", d => xLinearScale(d.smokes))
         .attr("cy", d => yLinearScale(d.age))
-        .attr("r", "10")
+        .attr("r", "15")
         .attr("fill", "lightblue")
         .attr("opacity", "1");
+
+    // Create Circle Text
+    var circleText = chartGroup.selectAll("text.abbrv")
+        .data(fileData)
+        .enter()
+        .append("text")
+        .attr("class", "abbrv")
+        .text(d => d.abbr)
+        .attr("dx", d => xLinearScale(d.smokes))
+        .attr("dy", d => yLinearScale(d.age))
+        .style("text-anchor", "middle")
+
+    // Create Axes Labels
+    var labelsGroup = chartGroup.append("g")
+        .append("transform", `translate(${width / 2},${height + 20})`)
+
+    labelsGroup.append("text")
+        .attr("x", 0)
+        .attr("y", 20)
+        .text("Smoking")
+
+    labelsGroup.append("text")
+        .attr("x", 0)
+        .attr("y", 40)
+        .text("Age")
+
+    chartGroup.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .text("Age")
+
+    chartGroup.append("text")
+        .attr("y", height + 50)
+        .attr("x", 0 + (width - (width / 2)))
+        .attr("dx", "1em")
+        .text("Smoking")
+
 
     // Create Tool Tips
     var toolTips = d3.tip()
@@ -75,7 +115,6 @@ d3.csv("./assets/data/data.csv").then(function (fileData) {
         });
 
     // Call Tool Tips to the Chart
-
     chartGroup.call(toolTips);
 
     // Create Event Listeners so Tool Tips will appear
