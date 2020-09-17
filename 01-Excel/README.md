@@ -1,16 +1,12 @@
-## HW 1 - Excel Challenge (Kickstarter Campaigns)
+## 01 - Excel Challenge
 
+### Kickstarter Campaigns
 #### Modify and analyze the provided .csv table data (4,000 past Kickstarter projects) to identify market trends.
-
-Apply conditoional formatting text/background colors to "state" column: Successful (green/pale green), Failed (red/pink), Canceled (black/blue), Currently Live (brown/yellow).
-
-Add col O ("Percent Funded"); enter formula showing the percentage each campaign has been funded to reach its initial goal. Apply three-color scale conditional formatting to the col, starting at 0% (dark red), transitioning to green at 100%, and blue at 200%.
-
-Add col P ("Average Donation"); enter formula showing the average $ amount contributed per # of campaign backers.
-
-Add cols Q ("Category") and R ("Sub-Category"); enter formulas splliting column N ("Category and Sub-Category") into the new cols. 
-
-Add cols S ("Date_Created_Conversion") and T ("Date_Ended_Conversion"); enter formulas converting the Unix timestamps in cols I ("deadline") and J ("launched"), respectively, to Excel date format in the new cols.
+* Apply conditoional formatting text/background colors to "state" column: Successful (green/pale green), Failed (red/pink), Canceled (black/blue), Currently Live (brown/yellow).
+* Add col O ("Percent Funded"); enter formula showing the percentage each campaign has been funded to reach its initial goal. Apply three-color scale conditional formatting to the col, starting at 0% (dark red), transitioning to green at 100%, and blue at 200%.
+* Add col P ("Average Donation"); enter formula showing the average $ amount contributed per # of campaign backers.
+* Add cols Q ("Category") and R ("Sub-Category"); enter formulas splliting column N ("Category and Sub-Category") into the new cols. 
+* Add cols S ("Date_Created_Conversion") and T ("Date_Ended_Conversion"); enter formulas converting the Unix timestamps in cols I ("deadline") and J ("launched"), respectively, to Excel date format in the new cols.
 
 #### Category Stats
 
