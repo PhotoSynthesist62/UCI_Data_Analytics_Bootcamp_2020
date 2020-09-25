@@ -21,5 +21,3 @@ A Jupyter Notebook using Matplotlib to visualize science study data. 249 mice id
 8. Scatter Plot of mouse weight versus average tumor volume for the Capomulin treatment regimen.
 
 9. Correlation Coefficient and Linear Regression Model between mouse weight and average tumor volume for the Capomulin treatment. Plot the Linear Regression Model on top of the previous scatter plot.
-
-10. Three observations or inferences that can be made from the data.
