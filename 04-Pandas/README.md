@@ -43,7 +43,6 @@ A Jupyter Notebook using the Pandas library to merge and analyze two datasets: s
     % Passing Reading (The percentage of students that passed reading.)
     % Overall Passing (The percentage of students that passed math **and** reading.)
 
-
 **Math Scores by Grade**
 <br> Table listing the average Math Scores for students by Grade Level.
 

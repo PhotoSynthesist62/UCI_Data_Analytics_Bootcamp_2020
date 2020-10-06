@@ -3,7 +3,6 @@
 ### Pymaceuticals
 A Jupyter Notebook using Matplotlib to visualize science study data. 249 mice identified with SCC tumor growth were treated through a variety of drug regimens. Tumor development was observed and measured at intervals over 45 days. The study's objective was to compare  Pymaceuticals' drug of interest, Capomulin against other comparable regimens. The visualizations, including a top-level summary of the study results, are intended for use in a technical report to be presented to an executive team.
 
-**Objectives**
 1. Data Cleanup. Review data for duplicate mice and associated data.
 
 2. Summary Statistics Table consisting of the mean, median, variance, standard deviation, and SEM of the tumor volume for each drug regimen.
