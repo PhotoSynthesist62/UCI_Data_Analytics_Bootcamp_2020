@@ -29,8 +29,8 @@ app = Flask(__name__)
 def home():
     print("Server received request for 'Home' page...")
     return (
-        f"Welcome to the Home Page!<br/><br/>"
-        f"AVAILABLE ROUTES: <br/><br/>"
+        f"<b>UCI Data Analytics Boot Camp #10: SQLAlchemy & Flask</b><br/><br/>Welcome to the Home Page!<br/><br/>"
+        f"<b>AVAILABLE ROUTES:</b><br/><br/>"
         f"List of Precipitation Totals:<br/>"
         f"/api/v1.0/precipitation<br/><br/>"
         f"List of Stations:<br/>"
@@ -40,7 +40,7 @@ def home():
         f"Enter a Start Date [yyyymmdd] for MAX, AVG, MIN Temperature:<br/>"
         f"/api/v1.0/<start><br/><br/>"
         f"Enter a Start and End Date [yyyymmdd/yyyymmdd] for MAX, AVG, MIN Temperature:<br/>"
-        f"/api/v1.0/<start>/<end>"
+        f"/api/v1.0<start>/<end>"
            )
 
 # Convert the query results to a dictionary using date as the key and prcp as the value.
