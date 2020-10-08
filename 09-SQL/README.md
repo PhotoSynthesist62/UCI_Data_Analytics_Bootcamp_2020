@@ -5,11 +5,11 @@
 
 Historical data modeling/analysis research project on employees from the 1980s and 1990s using 6 remaining .csv files. Design PostgreSQL tables in PGAdmin4 to hold and review .csv data.
 
-1. Sketch an Entity Relationship Digram (ERD) using http://www.quickdatabasediagrams.com.
+1. Sketch an Entity Relationship Digram (ERD) using http://www.quickdatabasediagrams.com. 
 
-2. Create a table schema for each of the 6 files, specifying data tyes, primary keys, foreign keys, and other constraints. Import each file into their respective table.
+2. Create a table schema for each of the 6 files, specifying data tyes, primary keys, foreign keys, and other constraints. Import each file into their respective table. [tables.sql]
 
-3. After the database is created, write SQL queries that will answer the following:
+3. After the database is created, write SQL queries [queries.sql] answering the following:
 
     * For all employees in the database: Employee number, last name, first name, gender, and salary 
 
