@@ -5,10 +5,13 @@
   <title>Web Design Challenge</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!-- Custom  CSS -->
   <link rel="stylesheet" type="text/css" href="style_ar.css">
 </head>
@@ -16,90 +19,67 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <nav class="navbar">
-          <ul>
-            <li><a href="index.html">Latitude Analysis Dashboard</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                aria-expanded="false">Plots<span class="caret"></span></a>
-              <ul class="dropdown-menu custom-menu">
-                <li><a href="visualization01.html">Maximum Temperature</a></li>
-                <li><a href="visualization02.html">Cloudiness</a></li>
-                <li><a href="visualization03.html">Wind Speed</a></li>
-                <li><a href="visualization04.html">Humidity</a></li>
-              </ul>
-              </a>
-            </li>
-            <li><a href="comparisons.html">Comparisons</a></li>
-            <li><a href="data_table.html">Data</a></li>
-          </ul>
-          <select id="nav-select">
-            <option value="home">Home</option>
-            <option value="plots">Plots</option>
-            <option value="comparisons"><a href="comparisons.html">Comparisons</a></option>
-            <option value="data_table">Data</option>
-          </select>
-          <div class="clearfix"></div>
+      <div class="col">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="#">Latitude Analysis Dashboard</a>
+          <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon navbar-dark"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active nav-justified">
+                <a class="nav-link" href="index.html">Main Page<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item dropdown nav-justified">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Plots</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="visualization01.html">Maximum Temperature</a>
+                  <a class="dropdown-item" href="visualization02.html">Cloudiness</a>
+                  <a class="dropdown-item" href="visualization03.html">Wind Speed</a>
+                  <a class="dropdown-item" href="visualization04.html">Humidity</a>
+                </div>
+              </li>
+              <li class="nav-item nav-justified">
+                <a class="nav-link" href="comparisons.html">Comparisons</a>
+              </li>
+              <li class="nav-item nav-justified">
+                <a class="nav-link" href="data.html">Data Table</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </div>
-  </div>
 
-  <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h1>Latitude Analysis Dashboard</h1>
+      <div class="col">
+        <img src="images\tree.jpg" alt="Tree in Weather" class="img-fluid">
       </div>
     </div>
-
     <div class="row">
-      <div class="col-md-12">
-        <img id="weather-welcome" src="images\landing_page.jpg" alt="Tree in Weather" width="600">
-
-        <h2>Project Introduction</h2>
-
-        <p>Hello, and welcome to the Latitude Analysis Dashboard created for the HTML/CSS segment of the 2020 UCI Data
-          Analytics Boot Camp. This web site is my first experience with Cascading Style Sheets and Bootstrap.</p>
-        <p>The scatterplot visualizations on these pages were created for an earlier project. ("WeatherPy" in directory
+      <div class="col">
+        <h1>Introduction</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 col-md-2 col-lg-2"></div>
+      <div class="col">
+        <p>Hello, and welcome to the Latitude Analysis Dashboard created for the HTML/CSS segment of the 2020 UCI
+          Data
+          Analytics Boot Camp. This website is my first experience with Cascading Style Sheets and Bootstrap.</p>
+        <p>The scatterplot visualizations on these pages were created for an earlier project. ("WeatherPy" in
+          directory
           <a href="https://github.com/PhotoSynthesist62/UCI_Data_Analytics_Bootcamp_2020/tree/master/06-Python_APIs"
-            target="_blank">06-Python_APIs</a>) The visualizations illustrate trends among weather phenomena across 500
-          cities. Phenomena include Maximum Temperature, Humidity, Wind Speed and Cloudiness. </p>
+            target="_blank">06-Python_APIs</a>) The visualizations illustrate trends among weather phenomena across
+          500
+          cities. Phenomena include Maximum Temperature, Humidity, Wind Speed and Cloudiness. </p><img src="" alt="">
       </div>
+      <div class="col-sm-2 col-md-2 col-lg-2"></div>
     </div>
-    <!-- 
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Visualizations</h2>
-      </div>
-    </div> -->
-
-    <!-- <div class="row">
-      <div class="col-md-3">
-        <img id="viz1" src="images\viz1.jpg" alt="Scatter Plot of Latitude versus Maximum Temperature" width="300">
-      </div>
-      <div class="col-md-3">
-        <img id="viz2" src="images\viz2.jpg" alt="Scatter Plot of Latitude versus Cloudiness" width="300">
-      </div>
-      <div class="col-md-3">
-        <img id="viz3" src="images\viz3.jpg" alt="Scatter Plot of Latitude versus Wind Speed" width="300">
-      </div>
-      <div class="col-md-3">
-        <img id="viz4" src="images\viz4.jpg" alt="Scatter Plot of Latitude versus Humidity" width="300">
-      </div>
-    </div> -->
   </div>
-
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>
