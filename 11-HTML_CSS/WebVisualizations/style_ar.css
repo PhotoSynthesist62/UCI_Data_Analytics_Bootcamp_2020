@@ -14,8 +14,8 @@ h1 {
   color: steelblue;
   font-style: normal;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -23,18 +23,26 @@ h2 {
   color: lightsteelblue;
   font-style: normal;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-img {
-  width: auto;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  display: block;
+h3 {
+  font-size: 15px;
+  color: lightsteelblue;
+  font-style: normal;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 20px;
+  color: steelblue;
+  font-style: normal;
+  text-align: justify;
+  margin-top: -2px;
+  margin-bottom: -2px;
 }
 
 p {
@@ -55,6 +63,12 @@ ul {
 .img-fluid {
   max-width: 100%;
   height: auto;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: block;
 }
 
 .navbar {
@@ -114,4 +128,10 @@ ul {
 th,
 td {
   text-align: center;
+}
+
+.dropdown-item-text {
+  display: block;
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  color: $dropdown-link-color;
 }
